@@ -2,7 +2,7 @@ spring:
   application:
     name: course-catalog-service
 message: Hello from default profile
-
+#-Dspring.profiles.active=prod
 #---
 #
 #spring:
