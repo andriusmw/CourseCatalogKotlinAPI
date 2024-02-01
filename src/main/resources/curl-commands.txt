@@ -1,6 +1,8 @@
 Greeting Controller:
 ====================
 curl -i http://localhost:8080/v1/greetings/dilip
+ Invoke-WebRequest -Uri http://localhost:8080/v1/greetings/andrew
+
 
 ===================
 Course Controller: |
