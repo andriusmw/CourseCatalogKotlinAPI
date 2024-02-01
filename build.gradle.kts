@@ -18,6 +18,7 @@ java {
 
 repositories {
 	mavenCentral()
+	//maven { url = uri("https://repo.spring.io/milestone") } // Agrega este repositorio
 }
 
 dependencies {
@@ -28,10 +29,16 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	runtimeOnly("com.h2database:h2")
 	runtimeOnly("org.postgresql:postgresql")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 	// logging
 	implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
+
+	//test
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
+//	testImplementation("org.springframework.boot:spring-boot-starter-webflux") // Corrige el nombre de la dependencia
+
+
 }
 
 tasks.withType<KotlinCompile> {

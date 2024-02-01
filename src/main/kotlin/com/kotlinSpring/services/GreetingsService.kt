@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service
 class GreetingsService {
     @Value("\${message}") // this access the message on application.yml , idkwbidc
     lateinit var message: String
-    fun retrieveGreeting(name: String) = "Hello $name, $message"
+    fun retrieveGreeting(name: String) = "$name, $message"
 }
