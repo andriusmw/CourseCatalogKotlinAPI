@@ -24,3 +24,16 @@ class CourseService(val courseRepository: CourseRepository) {
         }
     }
 }
+
+//------------------------README-----------------
+/* The service:
+        -Access a repository
+        -Declares the addCourse function
+            -for that it needs a DTO and an Entity
+        -If the call is correct, it saves the course and makes a return
+
+   The structure for calling this endpoint is on curl-commands.txt
+   we send the value for id, name and category on the call like if we receive it
+   from a Front-End.
+
+*/

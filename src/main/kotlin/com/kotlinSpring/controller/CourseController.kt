@@ -19,3 +19,12 @@ class CourseController(val courseService: CourseService) {
         return courseService.addCourse(courseDTO)
     }
 }
+
+//------------------------README-----------------
+/* The Controller defines the endpoint and call the service.
+
+    The "addCourse" function on this file should be called "addCourseController" to
+    avoid confusion with the addCourse function on courseService or upside down.
+            --> addCourse(){}  calls for courseService.addCourseService()
+
+*/
