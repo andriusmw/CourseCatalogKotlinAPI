@@ -37,7 +37,8 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webflux")
 //	testImplementation("org.springframework.boot:spring-boot-starter-webflux") // Corrige el nombre de la dependencia
-
+	testImplementation("io.mockk:mockk:1.10.4")
+	testImplementation("com.ninja-squad:springmockk:3.0.1")
 
 }
 
