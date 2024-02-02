@@ -10,6 +10,10 @@ Course Controller: |
 
 CREATE COURSE:
 ==============
+Invoke-RestMethod -Uri http://localhost:8080/v1/courses -Method Post -Body '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development"}' -Headers @{"Content-Type"="application/json"}
+
+
+
 curl -i \
 -d '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development"}' \
 -H "Content-Type: application/json" \
