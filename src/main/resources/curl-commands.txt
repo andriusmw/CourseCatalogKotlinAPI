@@ -12,6 +12,9 @@ CREATE COURSE:
 ==============
 Invoke-RestMethod -Uri http://localhost:8080/v1/courses -Method Post -Body '{"id":null, "name":"Build Restful APIs using Kotlin and SpringBoot", "category": "Development"}' -Headers @{"Content-Type"="application/json"}
 
+Invoke-RestMethod -Uri http://localhost:8080/v1/courses -Method Post -Body '{"id":null, "name":"Build Course 2", "category": "Development"}' -Headers @{"Content-Type"="application/json"}
+
+Invoke-RestMethod -Uri http://localhost:8080/v1/courses -Method Post -Body '{"id":null, "name":"Course 3", "category": "Development"}' -Headers @{"Content-Type"="application/json"}
 
 
 curl -i \
@@ -27,7 +30,11 @@ curl -i \
 
 GET COURSES:
 ==============
+MAKE SURE TO INSTALL POWERSHELL 7.X IF YOU GET ERROR (405) METHOD NO AVALIBLE (1H TILL I FOUND IT WAS A BUG FROM
+POWERSHELL 5.1 YISUS, ALL HAPPENS TO ME ¬¬ )
+Invoke-RestMethod -Uri http://localhost:8080/v1/courses
 curl -i http://localhost:8080/v1/courses
+
 
 UPDATE COURSE:
 ==============
