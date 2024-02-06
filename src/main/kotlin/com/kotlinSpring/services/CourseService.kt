@@ -2,6 +2,7 @@ package com.kotlinSpring.services
 
 import com.kotlinSpring.dto.CourseDTO
 import com.kotlinSpring.entity.Course
+import com.kotlinSpring.exception.CourseNoteFoundException
 import com.kotlinSpring.repository.CourseRepository
 import mu.KLogging
 import org.springframework.stereotype.Service
@@ -30,6 +31,25 @@ class CourseService(val courseRepository: CourseRepository) {
                 .map {
                     CourseDTO(it.id, it.name, it.category)
                 }
+    }
+
+    fun updateCourse(courseId: Int, courseDTO: CourseDTO): Any {
+
+       val existingCourse = courseRepository.findById(courseId)
+
+        if(existingCourse.isPresent){
+            existingCourse.get()
+                    .let {
+                        it.name = courseDTO.name
+                        it.category = courseDTO.category
+                        courseRepository.save(it)
+                        CourseDTO(it.id, it.name, it.category,)
+
+                    }
+        } else {
+            //throw
+            throw CourseNoteFoundException()
+        }
     }
 }
 
