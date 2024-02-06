@@ -37,7 +37,7 @@ class CourseService(val courseRepository: CourseRepository) {
 
        val existingCourse = courseRepository.findById(courseId)
 
-        if(existingCourse.isPresent){
+      return   if(existingCourse.isPresent){
             existingCourse.get()
                     .let {
                         it.name = courseDTO.name
