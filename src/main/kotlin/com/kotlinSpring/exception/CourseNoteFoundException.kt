@@ -1,5 +1,3 @@
 package com.kotlinSpring.exception
 
-class CourseNoteFoundException : Throwable() {
-
-}
+class CourseNoteFoundException(message: String) : RuntimeException(message)
